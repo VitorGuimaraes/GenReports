@@ -5,8 +5,11 @@ defmodule ReportsGenerator.ParserTest do
 
   describe "parse/1" do
     test "parses the file" do
+
+      # SETUP
       file_name = "report_test.csv"
 
+      # EXERCISE
       response = file_name
       |> Parser.parse_file()
       |> Enum.map(& &1)
@@ -24,6 +27,7 @@ defmodule ReportsGenerator.ParserTest do
         ["10", "churrasco", 36],
       ]
 
+      # ASSERTION
       assert response == expected_response
     end
   end

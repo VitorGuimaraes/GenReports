@@ -3,8 +3,11 @@ defmodule ReportsGenerator do
     "reports/#{filename}"
     # Reads file line by line
     |> File.stream!()
-    # Applies a map operation in line with parse_line() function
-    |> Enum.map(fn line -> parse_line(line) end)
+    # Creates a map with the data: %{id, food_name, price}
+    |> Enum.reduce(%{}, fn line, report_map -> # report_map is the accumulator
+      [id, _food_name, price] = parse_line(line) # using pattern matching
+      Map.put(report_map, id, price)
+    end)
   end
 
   defp parse_line(line) do

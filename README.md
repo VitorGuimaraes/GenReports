@@ -1,4 +1,4 @@
-# Report Gen
+# Gen Reports
 
 This project consists in a report generator, where a CSV file about orders from a restaurant is read and the follow metrics are calculated:
 

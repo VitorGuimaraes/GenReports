@@ -175,27 +175,3 @@ defmodule GenReportsTest do
     end
   end
 end
-
-# Elixir in action
-# Programming Elixir
-# Adopting Elixir: From concept to production
-# Learn functional programming with elixir
-# Elixir Succinctly
-# Introducing Elixir
-# Elixir Cookbook
-# Elixir programming
-# Programming phoenix
-# Phoenix in action
-# Programming Phoenix LiveView
-# Real-Time Phoenix: Build Highly Scalable Systems
-# Programming ecto
-# Designing elixir systems with OTP
-# Functional Web Development with Elixir, Otp, and Phoenix
-# Concurrent Data Processing in Elixir
-# Metaprogramming elixir
-# Build a Weather Station with Elixir and Nerves
-# Effective and Robust Testing for Elixir and its Ecosystem
-# Craft GraphQL APIs in Elixir with Absinthe
-# Designing for Scalability with Erlang/OTP
-# Programmer Passport: Elixir
-# Programmer Passport: OTP

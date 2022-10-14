@@ -11,7 +11,7 @@ This project consists in a report generator, where a CSV file about orders from 
 
 ## The CSV file structure
 
-The CSV file have the following columns:
+The CSV file has the following columns:
 
 | id |    order   | price |
 |:--:|:----------:|:-----:|

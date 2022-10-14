@@ -1,33 +1,30 @@
-defmodule ReportsGenerator.ParserTest do
+defmodule GenReports.ParserTest do
   use ExUnit.Case
 
-  alias ReportsGenerator.Parser
+  alias GenReports.Parser
 
-  describe "parse/1" do
+  describe "parse_file/1" do
     test "parses the file" do
 
-      # SETUP
-      file_name = "report_test.csv"
-
-      # EXERCISE
-      response = file_name
-      |> Parser.parse_file()
-      |> Enum.map(& &1)
+      filename = "report_test.csv"
+      response =
+        Parser.parse_file(filename)
+        |> Enum.to_list()
+        |> List.flatten()
 
       expected_response = [
-        ["1", "pizza", 48],
-        ["2", "açaí", 45],
-        ["3", "hambúrguer", 31],
-        ["4", "esfirra", 42],
-        ["5", "hambúrguer", 49],
-        ["6", "esfirra", 18],
-        ["7", "pizza", 27],
-        ["8", "esfirra", 25],
-        ["9", "churrasco", 24],
-        ["10", "churrasco", 36],
+        %{customer: "1", food: "pizza", price: 48},
+        %{customer: "2", food: "açaí", price: 45},
+        %{customer: "3", food: "hambúrguer", price: 31},
+        %{customer: "4", food: "esfirra", price: 42},
+        %{customer: "5", food: "hambúrguer", price: 49},
+        %{customer: "6", food: "esfirra", price: 18},
+        %{customer: "7", food: "pizza", price: 27},
+        %{customer: "8", food: "esfirra", price: 25},
+        %{customer: "9", food: "churrasco", price: 24},
+        %{customer: "10", food: "churrasco", price: 36}
       ]
 
-      # ASSERTION
       assert response == expected_response
     end
   end
